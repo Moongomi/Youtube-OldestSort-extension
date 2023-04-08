@@ -1,0 +1,12 @@
+#contents.ytd-rich-grid-renderer {
+    width: 100%;
+    padding-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+}
+
+#contents {
+    flex-direction: row-reverse;
+}

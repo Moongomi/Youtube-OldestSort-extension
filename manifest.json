@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Add Youtube Oldest Sort",
+  "description": "Youtube 채널 동영상을 오래된순으로 정렬하게 해주는 확장 프로그램입니다.",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+ "commands": {
+  "_execute_action": {
+    "suggested_key":  {
+      "default": "Alt+Shift+J"
+     }
+   }
+  },
+  "content_scripts": [
+    {
+    "matches": [
+      "https://www.youtube.com/@*"
+    ],
+    "js": ["content.js"]
+    }
+  ], 
+ "permissions": ["activeTab","scripting"],
+  "action": {
+    "default_icon": {
+      "16": "/images/icons8-sort-by-start-date-16.png",
+      "32": "/images/icons8-sort-by-start-date-32.png",
+      "48": "/images/icons8-sort-by-start-date-48.png",
+      "128": "/images/icons8-sort-by-start-date-128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/icons8-sort-by-start-date-16.png",
+    "32": "/images/icons8-sort-by-start-date-32.png",
+    "48": "/images/icons8-sort-by-start-date-48.png",
+    "128": "/images/icons8-sort-by-start-date-128.png"
+  }
+
+}
